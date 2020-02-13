@@ -1,0 +1,30 @@
+:host ::ng-deep .ui-card-title {
+  text-align: center;
+}
+
+.grade-header-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.grade-header-percentage {
+  font-size: 32px;
+  width: 100%;
+  text-align: center;
+  color: green;
+}
+
+.student-row {
+  border-bottom: 1px solid lightgrey;
+  padding: 5px;
+  align-items: center;
+
+  .percentage {
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+    margin-right: 25px;
+    width: 60px;
+  }
+}

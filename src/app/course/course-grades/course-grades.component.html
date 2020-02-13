@@ -1,0 +1,43 @@
+<div class="ui-g">
+  <p-card class="ui-g-12 ui-md-4" header="Minimum">
+    <div class="grade-header-percentage">
+      <span>50%</span>
+    </div>
+  </p-card>
+  <p-card class="ui-g-12 ui-md-4" header="Average">
+    <div class="grade-header-percentage">
+      <span>75%</span>
+    </div>
+  </p-card>
+  <p-card class="ui-g-12 ui-md-4" header="Maximum">
+    <div class="grade-header-percentage">
+      <span>100%</span>
+    </div>
+  </p-card>
+
+  <p-table [columns]="cols" [value]="students" [resizableColumns]="true">
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+          <th *ngFor="let col of columns" pResizableColumn>
+              {{col.header}}
+          </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr>
+          <td *ngFor="let col of columns">
+                  {{rowData[col.field]}}
+          </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <!-- <p-dataView [value]="students" class="ui-g-12">
+    <ng-template let-student pTemplate="listItem">
+        <div class="flex-row student-row">
+          <span class="percentage">{{student.grade}}%</span>
+          <span>{{student.firstName}} {{student.lastName}}</span>
+        </div>
+    </ng-template>
+  </p-dataView> -->
+</div>
